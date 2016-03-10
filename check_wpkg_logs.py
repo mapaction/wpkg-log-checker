@@ -46,30 +46,7 @@ if __name__ == '__main__':
 
     err_array = [(f[0], err_msg) for f in f_array for err_msg in get_wpkg_errors(f[1])]
 
-    for e in err_array:
-        print ("{}\t{}".format(e[0], e[1]))
-
     print ("err msg count = {}".format(len(err_array)))
 
-
-    # files_details = [(f, get_file_contents(f)) for f in log_files]
-    # print(files_details[1])
-
-
-    # for log_file in log_files:
-    #     # print(log_file)
-    #     # f = open(log_file)
-    #     # log_file_text = f.read()
-    #     log_file_text = get_file_contents(log_file)
-    #     # print(log_file_text)
-    #     # print("stable={},  name={}".format(check_wpkg_stable_branch(log_file_text), log_file))
-    #
-    #
-    #     if check_wpkg_stable_branch(log_file_text):
-    #         err_msgs = get_wpkg_errors(log_file_text)
-    #
-    #         if len(err_msgs) > 0:
-    #             print("Errors in logfile {}".format(log_file))
-    #
-    #             for err_msg in err_msgs:
-    #                 print(err_msg)
+    for e in err_array:
+        print ("{}\t{}".format(e[0], e[1]))
